@@ -8,6 +8,14 @@ export function ProductDetails() {
   return (
     <main>
       <h2>Product Details:</h2>
+      <p>
+        După click-ul dat pe <b>produs</b> în ProductList, adică pe <b>link</b>
+        -ul specific către acel produs, ruta se modifică la <b>/products/:id</b>
+        . <br />
+        <b>useParams()</b> extrage <b>id</b>-ul din URL-ul nou format. <br />
+        <b>getProductByI()</b> este apelată cu acest <b>id</b> pentru a obține
+        detaliile produsului respectiv.
+      </p>
       <img src="https://via.placeholder.com/960x240" alt="" />
       <div>
         <h3>Product: {product.name}</h3>
