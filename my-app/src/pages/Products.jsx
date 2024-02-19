@@ -9,7 +9,7 @@ export function Products() {
       <h2>Product List:</h2>
       <p>
         - Componenta <b> ProductList</b> furnizează o listă de produse sub formă
-        de link-uri, unde fiecare link ( <b> Link </b>) este asociat, prin
+        de link-uri, unde fiecare link (<b>Link</b>) este asociat, prin
         intermediul <b>id</b>-ului, cu detaliile specifice ale produsului.{" "}
         <br />- Funcția <b>Products()</b> utilizează componenta{" "}
         <b>ProductList</b> pentru a afișa, asa cum se vede mai jos, lista de

@@ -5,6 +5,9 @@ import { About } from "./pages/About";
 import { Products } from "./pages/Products";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ProductDetails } from "./pages/ProductDetails";
+import { Mission } from "./components/Mission";
+import { Team } from "./components/Team";
+import { Reviews } from "./components/Reviews";
 
 function App() {
   return (
@@ -22,7 +25,13 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+
+        <Route path="/about" element={<About />}>
+          <Route path="mission" element={<Mission />} />
+          <Route path="team" element={<Team />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
+
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="*" element={<NotFoundPage />} />
