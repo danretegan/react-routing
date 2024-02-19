@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -8,35 +8,27 @@ import { ProductDetails } from "./pages/ProductDetails";
 import { Mission } from "./components/Mission";
 import { Team } from "./components/Team";
 import { Reviews } from "./components/Reviews";
+import { SharedLayout } from "./components/sharedLayout/SharedLayout";
 
 function App() {
   return (
-    <>
-      <nav>
-        <Link to="/" className="nav-element">
-          Home
-        </Link>
-        <Link to="/about" className="nav-element">
-          About
-        </Link>
-        <Link to="/products" className="nav-element">
-          Products
-        </Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      {/* Aici incepe Route SharedLayout: */}
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
 
-        <Route path="/about" element={<About />}>
+        <Route path="about" element={<About />}>
           <Route path="mission" element={<Mission />} />
           <Route path="team" element={<Team />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
 
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="products" element={<Products />} />
+        <Route path="products/:id" element={<ProductDetails />} />
         <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </>
+      </Route>
+      {/* Pana aici imbrica Route SharedLayout. Restul Route sunt in interior. */}
+    </Routes>
   );
 }
 

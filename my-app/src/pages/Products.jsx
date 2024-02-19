@@ -1,4 +1,4 @@
-import { ProductList } from "../components/ProductList/ProductList";
+import { ProductList } from "../components/productList/ProductList";
 import { getProducts } from "../fakeAPI";
 
 export function Products() {
