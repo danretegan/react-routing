@@ -1,3 +1,13 @@
+import { ProductList } from "../components/ProductList/ProductList";
+import { getProducts } from "../fakeAPI";
+
 export function Products() {
-  return <div>Products page...</div>;
+  const products = getProducts();
+
+  return (
+    <main>
+      <h2>Product List:</h2>
+      <ProductList products={products} />
+    </main>
+  );
 }
