@@ -4,4 +4,6 @@
   padding: 2rem;
 }
 
-
+.nav-element {
+  padding-right: 10px;
+}

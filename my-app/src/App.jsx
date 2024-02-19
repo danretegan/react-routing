@@ -10,9 +10,15 @@ function App() {
   return (
     <>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/products">Products</Link>
+        <Link to="/" className="nav-element">
+          Home
+        </Link>
+        <Link to="/about" className="nav-element">
+          About
+        </Link>
+        <Link to="/products" className="nav-element">
+          Products
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
