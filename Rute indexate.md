@@ -115,7 +115,7 @@ export const App = () => {
 };
 ```
 
-CUM FUNCȚIONEAZĂ?
+### CUM FUNCȚIONEAZĂ?
 Numai o rută suprapusă poate fi indexată. În `Route` nu se specifică prop-ul `path`, deoarece se potrivește cu valoarea `path` de la părinte. În schimb, este transmis `index` care îi spune lui React Router că ruta este indexată și ar trebui randată la aceeași adresă ca și părintele ei.
 
 Pot exista oricâte rute indexate avem nevoie. Totul depinde doar de sarcină. De exemplu, dacă am avea în aplicația noastră pagini cu panouri de administrare a căror componente ale interfeței ar fi complet diferite, atunci structura rutelor ar putea fi proiectată astfel:
