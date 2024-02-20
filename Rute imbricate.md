@@ -96,5 +96,5 @@ export const About = () => {
 
 Dacă adresa URL actuală din bara de căutare a browser-ului se potrivește cu `path`-ul unei rute suprapuse, `Outlet` va randa componenta sa. Altfel va fi `null` și nu va avea niciun efect asupra marcajului din componenta părinte.
 
-LINK-URI RELATIVE
+### LINK-URI RELATIVE
 Reține valoarea prop-ului `to` din componenta `Link`. La fel ca `path`-ul unei rute suprapuse, valoarea prop-ului `to` a linkurilor suprapuse este relativă la adresa URL actuală. Componenta `About` se randează la adresa `/about`, deci, un link cu `to="mission"` va indica `/about/mission`. Dacă trebuie să creați un link către o altă pagină, atunci e nevoie să specificăm calea completă. De exemplu, `to="/products"`.
