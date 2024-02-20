@@ -1,9 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { getProductById } from "../fakeAPI";
+import { BackLink } from "../components/BackLink";
 
 export function ProductDetails() {
   const { id } = useParams();
   const product = getProductById(id);
+  const location = useLocation();
+  console.log(location.state?.from);
+  const backLinkHref = location.state?.from ?? "/products";
+  // operatorul nullish coalescing (??) furnizează o valoare de rezervă (în acest caz, un șir gol "") în cazul în care valoarea din stânga sa (searchParams.get("name")) este null sau undefined.
 
   return (
     <main>
@@ -17,6 +22,7 @@ export function ProductDetails() {
         apelată cu acest <b>id</b> pentru a obține detaliile produsului
         respectiv, detalii afisate mai jos:
       </p>
+      <BackLink to={backLinkHref}>Back to products</BackLink>
       <img src="https://via.placeholder.com/960x240" alt="" />
       <div>
         <h3>Product: {product.name}</h3>
