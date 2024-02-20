@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { HiSearch } from "react-icons/hi";
 
-export function SearchBox({ value, onChange }) {
+const SearchBox = ({ value, onChange }) => {
   return (
     <div>
       <input
@@ -13,9 +13,11 @@ export function SearchBox({ value, onChange }) {
       <div>Search term...</div>
     </div>
   );
-}
+};
 
 SearchBox.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
 };
+
+export default SearchBox;

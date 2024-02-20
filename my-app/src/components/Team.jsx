@@ -1,4 +1,4 @@
-export function Team() {
+const Team = () => {
   return (
     <section>
       <ul>
@@ -20,4 +20,6 @@ export function Team() {
       </ul>
     </section>
   );
-}
+};
+
+export default Team;

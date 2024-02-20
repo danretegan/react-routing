@@ -1,4 +1,4 @@
-export function Reviews() {
+const Reviews = () => {
   return (
     <section>
       <div>
@@ -20,4 +20,6 @@ export function Reviews() {
       </div>
     </section>
   );
-}
+};
+
+export default Reviews;

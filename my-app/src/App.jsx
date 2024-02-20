@@ -1,14 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Products } from "./pages/Products";
-import { NotFoundPage } from "./pages/NotFoundPage";
-import { ProductDetails } from "./pages/ProductDetails";
-import { Mission } from "./components/Mission";
-import { Team } from "./components/Team";
-import { Reviews } from "./components/Reviews";
-import { SharedLayout } from "./components/sharedLayout/SharedLayout";
+import SharedLayout from "./components/sharedLayout/SharedLayout";
+import Home from "./pages/Home";
+import { lazy } from "react";
+
+//  Importurile dinamice (lazy()) trebuie facute DUPA importurile statice!
+
+const About = lazy(() => import("./pages/About"));
+const ProductDetails = lazy(() => import("./pages/ProductDetails"));
+const Products = lazy(() => import("./pages/Products"));
+const Mission = lazy(() => import("./components/Mission"));
+const Team = lazy(() => import("./components/Team"));
+const Reviews = lazy(() => import("./components/Reviews"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-export function Mission() {
+const Mission = () => {
   return (
     <section>
       <h2>Our mission</h2>
@@ -17,4 +17,6 @@ export function Mission() {
       </p>
     </section>
   );
-}
+};
+
+export default Mission;
