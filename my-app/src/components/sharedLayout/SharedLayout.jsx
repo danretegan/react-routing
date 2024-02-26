@@ -6,13 +6,13 @@ const SharedLayout = () => {
   return (
     <div>
       <nav>
-        <Link to="/" className={styles.navElement}>
+        <Link to="/react-routing/" className={styles.navElement}>
           Home
         </Link>
-        <Link to="/about" className={styles.navElement}>
+        <Link to="/react-routing/about" className={styles.navElement}>
           About
         </Link>
-        <Link to="/products" className={styles.navElement}>
+        <Link to="/react-routing/products" className={styles.navElement}>
           Products
         </Link>
       </nav>
