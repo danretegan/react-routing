@@ -7,7 +7,6 @@
 - useParams hook
 - nested routes
 - indexed routes
-- Navigate /useNavigate
 - query strings /useSearchParams
 - location /useLocation hook /location.state
 - React.lazy() /React.Suspense
