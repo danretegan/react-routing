@@ -7,7 +7,7 @@ const Products = () => {
   const products = getProducts();
   const [searchParams, setSearchParams] = useSearchParams();
   const productName = searchParams.get("name") ?? "";
-  // operatorul nullish coalescing (??) furnizează o valoare de rezervă (în acest caz, un șir gol "") în cazul în care valoarea din stânga sa (searchParams.get("name")) este null sau undefined.
+  // operatorul nullish coalescing (`??`) furnizează o valoare de rezervă (în acest caz, un șir gol "") în cazul în care valoarea din stânga sa (searchParams.get("name")) este null sau undefined.
 
   const visibleProducts = products.filter((product) =>
     product.name.toLowerCase().includes(productName.toLowerCase())

@@ -11,7 +11,7 @@ const ProductDetails = () => {
   console.log("Obiectul de locație:", location.state);
 
   const backLinkHref = location.state?.from ?? "/products";
-  // Operatorul nullish coalescing (??) furnizează o valoare de rezervă ("/products") în cazul în care valoarea din stânga sa (location.state?.from) este null sau undefined.
+  // Accesăm informația despre locație, cu ajutorul state-ului, pentru a oferi un link înapoi către locația anterioară a utilizatorului. Operatorul nullish coalescing (`??`) furnizează o valoare de rezervă ("/products") în cazul în care valoarea din stânga sa (location.state?.from) este null sau undefined.
 
   return (
     <main>

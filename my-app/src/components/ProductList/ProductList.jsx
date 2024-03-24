@@ -12,7 +12,7 @@ const ProductList = ({ products }) => {
       {products.map((product) => (
         <div key={product.id}>
           <Link to={`${product.id}`} state={{ from: location }}>
-            {/* Este transmis obiectul `state`, care include proprietatea `from` cu valoarea obiectului de localizare (`location`). Acest lucru va fi folosit ulterior pentru a reveni la pagina inițială de unde a avut loc navigarea. */}
+            {/* Transmitem obiectul `state`, care include proprietatea `from` cu valoarea obiectului de localizare (`location`). Altfel spus: transmitem locația curentă utilizând state atunci când generăm link-urile către paginile de detalii ale produselor. Acest lucru va fi folosit ulterior in ProductDetails.jsx pentru a reveni la pagina inițială de unde a avut loc navigarea. */}
             <img src="https://via.placeholder.com/200x100" alt="" />
             <div>{product.name}</div>
           </Link>
