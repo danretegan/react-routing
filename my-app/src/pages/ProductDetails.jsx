@@ -6,7 +6,10 @@ const ProductDetails = () => {
   const { id } = useParams();
   const product = getProductById(id);
   const location = useLocation();
-  console.log(location.state?.from);
+
+  // Afișam în consolă obiectul de locație curentă (location.state) și datele suplimentare asociate acestuia, care sunt stocate în proprietatea state:
+  console.log("Obiectul de locație:", location.state);
+
   const backLinkHref = location.state?.from ?? "/products";
   // Operatorul nullish coalescing (??) furnizează o valoare de rezervă ("/products") în cazul în care valoarea din stânga sa (location.state?.from) este null sau undefined.
 
